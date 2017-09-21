@@ -9,8 +9,8 @@
     https://angular-ui.github.io/angular-google-maps/#!/api/windows
   -->
 <h3>Map</h3>
-<div class="row" ng-controller="ListingsController" ng-init="find()">
-    <div class="col-md-10">
+<div id="map_map" ng-controller="ListingsController" ng-init="find()">
+    
         <ui-gmap-google-map center="map.center" zoom="map.zoom">
             <ui-gmap-markers models="listings" idKey="'_id'" coords="'coordinates'" click="onClick">
                 <ui-gmap-windows show="show">
@@ -22,5 +22,4 @@
                 </ui-gmap-windows>
             </ui-gmap-markers>
         </ui-gmap-google-map>
-    </div>
 </div>

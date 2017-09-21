@@ -81,6 +81,11 @@ angular.module('listings').controller('ListingsController', ['$scope', '$locatio
         successfully finished, navigate back to the 'listing.list' state using $state.go(). If an error 
         occurs, pass it to $scope.error. 
        */
+        var listing = {
+            name: $scope.name,
+            code: $scope.code,
+            address: $scope.address
+        };
         if (!isValid) {
             $scope.$broadcast('show-errors-check-validity', 'articleForm');
             return false;
@@ -101,6 +106,7 @@ angular.module('listings').controller('ListingsController', ['$scope', '$locatio
         Implement the remove function. If the removal is successful, navigate back to 'listing.list'. Otherwise, 
         display the error. 
        */
+       
         var id = $stateParams.listingId;
 
         Listings.delete(id)
